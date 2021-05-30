@@ -1,21 +1,25 @@
 <template>
     <div>
-        <p>like({{ number }})</p>
+        <p>like({{ halfNumber }})</p>
         <button @click="increment">+1</button>
     </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      number: 5
-    };
+  props: ["totalNumber"],
+  computed: {
+    halfNumber() {
+      return this.totalNumber / 2;
+    }
   },
   methods: {
       increment() {
-          this.number += 1;
+          this.Number += 1;
       }
   }
 }
 </script>
+
+<style scoped>
+</style>
