@@ -1,5 +1,12 @@
 <template>
     <div>
-        <h1>Number of Likes</h1>
+        <slot></slot>
     </div>
 </template>
+
+<script>
+
+export default{
+    props: ["headertext"]
+}
+</script>
